@@ -1,0 +1,441 @@
+/*:root{
+  --color1: rgb(219,144,.5);
+  --color2: rgba(23, 180, 83, 0.877);
+  --color3: rgba(11,194,211, 0.623);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --margenes: 60px;
+  --espacios: 10px;
+  --espacios-contenido:45px;
+}*/
+.cuerpos {background:url(img/luz.jpg);}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'algerian';
+  background:white;
+}
+
+img{
+  vertical-align: top;
+}
+
+
+/* Preloader */
+.hidden{
+  overflow: hidden;
+}
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: #cef;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+
+  50%,
+  100% {
+    top: 19px;
+    height: 26px;
+  }
+}
+
+/* Header */
+
+header{
+  width: 100%;
+  height:748px;
+
+}
+/*
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+
+
+header img  {
+  width: 100%;
+  height:748px; 
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5)
+}
+
+.nav1{/*  inicio equipo etc*/
+  background: transparent;
+  height: 80px;
+  color:white;
+}
+
+.nav2{
+  background: transparent;
+  height:100px;
+  color:#000;
+}
+
+.contenedor-nav{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width:1000px;
+  height:inherit;
+  overflow: hidden;
+}
+
+nav .enlaces a{
+  display: inline-block;
+  padding: 10px 0;
+  margin-right: 17px;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+nav .enlaces a:hover{/* hover al seleccionar el menu*/
+  border-bottom: 3px solid blue;
+  transition: 0.6s;
+}
+
+.logo, .logo img{ height:50px;}/*logo*/
+.logo, .logo img{ width:400px;}/*logo*/
+
+.icono{
+  display:none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color:whitesmoke;
+  overflow: hidden;
+  text-align: center;
+}
+
+.textos>h1{font-size:80px;;}
+
+.textos>h2{font-size: 30px; font-weight: 300;}
+
+/* Main */
+
+.contenedor{
+  margin:auto;
+  padding: var(--margenes) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenedor h3{/*nuestro trabajo*/
+  font-size: var(--titulos);
+  color: blue;
+  margin-bottom: var(--espacios);
+}
+
+.contenedor p{
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: blue;
+}
+
+.after::after{
+  content:'';
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: white;/*raya de nuestros servicios*/
+  margin-bottom: var(--espacios-contenido);
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+    /*color de fondo*/
+}
+
+.content-card{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+  overflow: hidden;
+  height:400px;
+}
+
+.people{
+  height: 80%;
+}
+
+.content-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-team{
+  height: 20%;
+  width: 100%;
+  padding: var(--espacios) 0;
+    
+}
+
+.about{
+  background: url(img/luz.jpg);/*imagen de nuestros servicios*/
+  height: 300px;
+    
+}
+
+.servicios{
+  display: flex;
+  color:white;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.caja-servicios{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+.caja-servicios>h4{
+  margin-bottom: var(--espacios);
+    color:red;
+}
+
+.caja-servicios>p{
+  text-align: center;
+    color: white;
+    
+}
+
+.botones-work{
+  overflow: hidden;
+      
+}
+
+.botones-work li{
+  display: inline-block;
+  text-align: center;
+  margin-left: 15px;
+  margin-bottom:10px;
+  padding: 6px 12px;
+  border: 1px solid white;
+  list-style: none;
+  color: black;
+}
+
+.botones-work li:hover{
+  background:aqua;
+  color:white;
+  cursor: pointer;
+}
+
+.botones-work .active{
+  background: aqua;
+  color:#fff;
+}
+
+
+.galeria-work{
+  
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cuerpos {background: ;
+    
+}
+.cont-work{
+ background: aqua;
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+  height:300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.img-work{
+  height: 90%;
+  width: 100%;
+}
+
+.img-work img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textos-work{
+  height: 10%;
+}
+
+.textos-work h4{
+  line-height: 30px;
+  font-weight: 300;
+}
+
+/* Footer */
+
+footer{background:url(img/luz.jpg);}
+
+footer{
+    height: 300px;
+}
+
+.marca-logo{
+  width: 40%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+}
+.marca-logo img{
+  width: 100%;
+}
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 100%;
+}
+.fab{
+  font-size:60px;
+  color: aqua;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+}
+
+footer p{
+  margin-top:var(--espacios);
+}
+
+@media screen and (max-width: 700px){
+  .nav2{
+    color: #fff;
+  }
+
+  .icono{
+    display:block;
+    cursor: pointer;
+  }
+
+  .enlaces{
+    position: fixed;
+    top:80px;
+    background: #2c3e50;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .enlaces a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;
+    color:#fff;
+  }
+
+  .textos>h1{font-size: 70px;}
+  .textos>h2{font-size:35px;}
+
+  .content-card{
+    width: 48%;
+    margin-bottom:var(--margenes);
+  }
+
+  :root{
+    --margenes: 30px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  :root{
+    --espacios-contenido: 25px;
+  }
+
+  .content-card{
+    width: 90%;
+  }
+
+  .caja-servicios{
+    width: 90%;
+    margin-bottom: auto;
+  }
+
+  .cont-work{
+    width: 85%;
+  }
+
+  .marca-logo{
+    width: 80%;
+  }
+
+  .iconos{
+    margin: auto;
+  }
+}
